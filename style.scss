@@ -1,0 +1,636 @@
+$bgColor: #90C1DD;
+$menuBar:#77B75B;
+$menuIcon: #A8DB92;
+$button: #AA6339;
+$buttonText: #5B311F;
+$paragraph: #658C99;
+$form: #ffffff;
+$formFocus: #E8E8E8;
+$formText: #AA6339;
+
+
+$commonFont: 'Open Sans', sans-serif;
+
+
+
+/* Initial body */
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    left: 0;
+    margin: 0;
+    top: 0px;
+    overflow: hidden;
+    position: relative;
+    background-color: $bgColor;
+
+}
+
+
+p{
+    
+    color: $paragraph;
+    font-size: .8em;
+    font-family: $commonFont;
+    text-align: center; 
+    background-color:$bgColor;
+    
+}
+
+h1{
+    
+    font-size:2em;
+    color:$formText;
+}
+
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+
+/* Initial menu */
+
+.menu {
+    background-color: $menuBar;
+    right: -285px;
+    height: 100%;
+    position: fixed;
+    width: 285px;
+    z-index: 10;
+    -webkit-transform: translate3d(0, 0, 50px);
+    box-shadow: inset 7px 0 9px -7px rgba(0, 0.7, 0, 0);
+    ul {
+        border-top: 1px solid #636366;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        position: relative;
+        border-bottom: 1px solid #636366;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 45px;
+        padding-bottom: 3px;
+        padding-left: 20px;
+        padding-top: 3px;
+        &:hover {
+            background-color: #161616;
+        }
+    }
+}
+
+
+/* Basic styling */
+
+.menuHeader {
+    height: auto;
+    color: #BDEF92;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5em;
+    padding: .5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu {
+    li noClick:hover {
+        cursor: none;
+    }
+    a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+.icon-close {
+    padding-left: 10em;
+    color: #353535;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icon-menu {
+    position: fixed;
+    float: right;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: $menuBar;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transform: translate3d(0, 0, 11px);
+    z-index: 6;
+    i {
+        margin-right: 5px;
+    }
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+    padding-bottom: .2em;
+    padding-top: .2em;
+    padding-left: .5em;
+    padding-right: 1em;
+    cursor: pointer;
+}
+
+.icon-hamburger,
+.icon-search {
+    float: right;
+}
+
+.icon-back{
+    
+    float: left;
+    
+}
+
+.searchBar {
+    position: fixed;
+    top: -10em;
+    width: 100%;
+    height: 2.5em;
+    z-index: 5;
+    -webkit-transform: translate3d(0, 0, 10px);
+}
+
+.searchBox {
+    height: 45px;
+    width: 100%;
+    padding-left: 1em;
+    border: thin;
+    border-color: #fff;
+    font-size: 1em;
+    background-color: $form;
+    color: $formText;
+    outline: none;
+}
+
+.closeAll {
+    display: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #000;
+    opacity: .7;
+    -webkit-transform: translate3d(0, 0, 10px);
+    z-index: 5;
+    pointer-events: all;
+}
+
+.spacer {
+    width: 100%;
+    height: 5em;
+    opacity: 0;
+    position: relative;
+}
+
+.autoHeight {
+    position: relative;
+    height: auto;
+    text-align: center;
+}
+
+#container {
+    height: auto;
+    width: 100%;
+    background-color: #161616;
+    position: relative;
+}
+
+.slidingContent{
+    
+    height:80%;
+}
+
+
+.fullPage {
+    height: 100%;
+}
+
+.formInput {
+    color: $formText;
+    background-color: $form;
+    font-size: 1em;
+    width: 100%;
+    height: 8%;
+    border-radius: 3px;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: none;
+}
+
+input {
+    &:hover {
+        background-color: $formFocus;
+    }
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.menu input:focus {
+    background-color: $formFocus;
+    -webkit-appearance: none;
+    outline: solid;
+    outline-color: #BDEF92;
+}
+
+input[type=date] {
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        display: none;
+    }
+    &::-webkit-calendar-picker-indicator {
+        font-size: 4em;
+    }
+}
+
+.button {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $button;
+    color: $buttonText;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 1000;
+    height: 2em;
+    width: 100%;
+    margin-top: 1em;
+    -webkit-transition-duration: .2s;
+    /* Chrome, Safari, Opera */
+    transition-duration: .2s;
+    outline: none;
+    &:hover {
+        background-color: $buttonText;
+        color: $button;
+    }
+}
+
+label {
+    color: $buttonText;
+    font-size: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.imgResize {
+    height: 7em;
+}
+
+.logoResize{
+    width:100%;
+    max-width: 590px;
+    max-height: 250px;
+    
+    
+}
+
+a {
+    color: white;
+}
+
+.nameCol {
+    padding: 3em;
+    font-size: 1.5em;
+}
+
+.livedCol,
+.pageCol {
+    padding: 3em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* Zebra striping */
+
+tr:nth-of-type(odd) {
+    background: $paragraph;
+}
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 6px;
+    text-align: left;
+    border-radius: 3px;
+}
+ 
+.results {
+    height: 100%;
+}
+
+td a{
+    
+    font-size:1em;
+    line-height: 2.5em;
+    text-decoration: none;
+}
+
+
+tr:hover{
+    
+    background-color:#D4926A;
+    cursor:pointer;
+}
+
+td {
+    color: $buttonText;
+    font-size:1em;
+    text-align: center;
+}
+
+.results{
+}
+
+
+/*
+* Keyframes for page slide
+*/
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+/*
+* CSS Animations
+* Don't forget to add vendor prefixes!
+*/
+
+.m-scene {
+    .scene_element {
+        -webkit-animation-duration: 0.25s;
+        animation-duration: 0.25s;
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .scene_element--fadein {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+    }
+    .scene_element--fadeinright {
+        -webkit-animation-name: fadeInRight;
+        animation-name: fadeInRight;
+    }
+    
+        .scene_element--fadeinleft {
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+    }
+    &.is-exiting .scene_element {
+        -webkit-animation-direction: alternate-reverse;
+        animation-direction: alternate-reverse;
+    }
+}
+
+.responsiveImg{
+ 
+    width:auto;
+    max-width: 400px;
+    height:60%;
+
+    
+}
+
+
+
+.personInfo{
+    z-index:4;
+    
+    
+}
+
+#seedPlanting{
+    
+    animation-duration: 1s;
+    animation-delay: 1s;
+    position: fixed;
+    left:40%;
+    z-index:3;
+}
+
+
+.tree{
+    width:auto;
+    height:auto;
+    max-width: 400px;
+    max-height:500px;
+    display:inline;
+}
+
+#day1{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+    z-index:3;
+    
+}
+
+
+#day2{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+}
+
+
+
+#day3{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+}
+
+
+#day4{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+}
+
+
+#day5{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+}
+
+
+
+#day6{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+}
+
+
+
+#day7{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+}
+
+
+
+#day8{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+}
+
+
+
+
+#day9{
+
+    
+    display: none;
+    animation-duration: 2s;
+   animation-delay: 3s;
+    z-index:3;
+}
+
+
+//.treeAnim{
+//    
+//    width: 400px;
+//    height: 500px;
+//    margin-left:auto;
+//    margin-right:auto;
+//    background-image: url("http://eddiebarkman.com/remember/images/treeSheet.png");
+//    background-repeat: no-repeat;
+//
+//            animation: play .8s steps(8) forwards;
+//    
+//    
+//}
+//
+//@keyframes play {
+//   from { background-position:    0px; }
+//     to { background-position: -3200px; }
+//}
+
